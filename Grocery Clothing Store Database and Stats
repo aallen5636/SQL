@@ -1,0 +1,27 @@
+CREATE TABLE clothes (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, avalible INTEGER, sold INTEGER);
+
+INSERT INTO clothes VALUES 
+(1, "skirt", 33, 75, 56),
+(2, "shirt", 25, 200, 76),
+(3, "shoes", 67, 300, 250), 
+(4, "socks", 12, 736, 34), 
+(5, "gloves", 26, 34, 12),
+(6, "rings", 11, 56, 33),
+(7, "underwear", 15, 456, 345), 
+(8, "bra", 56, 34, 12), 
+(9, "earings", 12, 45, 23), 
+(10, "bracelet", 22, 345, 23), 
+(11, "watch", 123, 45, 12), 
+(12, "scarf", 12, 34, 25), 
+(13, "hat", 25, 45, 34), 
+(14, "mittens", 23, 56, 43),
+(15, "glasses", 200, 45, 32);
+
+--Clothing by price 
+SElECT * FROM clothes ORDER by price;
+
+--How many of each Clothing item was sold
+SELECT * FROM clothes WHERE sold > 21;
+
+--How many items available 
+SELECT sum(avalible) FROM clothes;
